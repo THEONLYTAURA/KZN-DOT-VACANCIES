@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KZN DoT Vacancies</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+}
+
+/* HEADER */
+header {
+    background: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #f2a900;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 22px;
+}
+
+header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* CONTAINER */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* FILTER BAR */
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-bar input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.filter-bar select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+}
+
+/* RESULTS COUNT */
+.results-count {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* SECTION HEADING */
+.section-heading {
+    font-size: 15px;
+    font-weight: bold;
+    color: #003366;
+    background: #e8edf3;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin: 25px 0 12px 0;
+    border-left: 5px solid #f2a900;
+}
+
+/* JOB CARD */
+.job-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 6px solid #003366;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.job-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.job-info {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+.job-requirements {
+    font-size: 13px;
+    color: #666;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid #eee;
+}
+
+/* BADGES */
+.badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-right: 4px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.badge-youth { background: #d4edda; color: #155724; }
+.badge-mature { background: #fff3cd; color: #856404; }
+.badge-all { background: #cce5ff; color: #004085; }
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.apply {
+    background-color: #25D366;
+    color: white;
+}
+
+.pdf {
+    background-color: #f2a900;
+    color: black;
+}
+
+/* NO RESULTS */
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 16px;
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #003366;
+    color: white;
+    margin-top: 30px;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>KZN Department of Transport</h1>
+    <p>Vacancy Opportunities — EPWP Programme | uMkhanyakude District</p>
+</header>
+
+<div class="container">
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="🔍 Search by location or programme...">
+        <select id="programmeFilter">
+            <option value="">All Programmes</option>
+            <option value="Beautification of Government Buildings">Beautification of Gov. Buildings</option>
+            <option value="Field Workers">Field Workers</option>
+            <option value="VRRM">VRRM</option>
+            <option value="Washing of Government Vehicles">Washing of Gov. Vehicles</option>
+        </select>
+    </div>
+
+    <div class="results-count" id="resultsCount"></div>
+
+    <div id="jobList">
+
+        <!-- ===== BEAUTIFICATION OF GOVERNMENT BUILDINGS ===== -->
+        <div class="section-heading" data-section="Beautification of Government Buildings">🏛️ Beautification of Government Buildings</div>
+
+        <div class="job-card" data-programme="Beautification of Government Buildings">
+            <div class="job-title">EPWP Participant — Beautification of Government Buildings</div>
+            <div class="job-info">📍 Hluhluwe (Big 5 Hlabisa)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–58</div>
+            <span class="badge badge-all">Youth &amp; Mature</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Beautification of Government Buildings">
+            <div class="job-title">EPWP Participant — Beautification of Government Buildings</div>
+            <div class="job-info">📍 Jozini Municipality</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–58</div>
+            <span class="badge badge-all">Youth &amp; Mature</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Beautification of Government Buildings">
+            <div class="job-title">EPWP Participant — Beautification of Government Buildings</div>
+            <div class="job-info">📍 Mtubatuba Municipality</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–58</div>
+            <span class="badge badge-all">Youth &amp; Mature</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Beautification of Government Buildings">
+            <div class="job-title">EPWP Participant — Beautification of Government Buildings</div>
+            <div class="job-info">📍 uMkhanyakude District</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–58</div>
+            <span class="badge badge-all">Youth &amp; Mature</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <!-- ===== FIELD WORKERS ===== -->
+        <div class="section-heading" data-section="Field Workers">🌿 Field Workers Programme</div>
+
+        <div class="job-card" data-programme="Field Workers">
+            <div class="job-title">EPWP Participant — Field Worker</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 1)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Field Workers">
+            <div class="job-title">EPWP Participant — Field Worker</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 2)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Field Workers">
+            <div class="job-title">EPWP Participant — Field Worker</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 3)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Field Workers">
+            <div class="job-title">EPWP Participant — Field Worker</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 4)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <!-- ===== VRRM ===== -->
+        <div class="section-heading" data-section="VRRM">🛣️ VRRM Programme</div>
+
+        <div class="job-card" data-programme="VRRM">
+            <div class="job-title">EPWP Participant — VRRM (Vegetation, Roadside & Road Maintenance)</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 1)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 10–12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="VRRM">
+            <div class="job-title">EPWP Participant — VRRM (Vegetation, Roadside & Road Maintenance)</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 2)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 10–12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="VRRM">
+            <div class="job-title">EPWP Participant — VRRM (Vegetation, Roadside & Road Maintenance)</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 3)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 10–12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="VRRM">
+            <div class="job-title">EPWP Participant — VRRM (Vegetation, Roadside & Road Maintenance)</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 4)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 Grade 10–12 &nbsp;|&nbsp; 👤 Ages 18–35</div>
+            <span class="badge badge-youth">Youth Focus</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <!-- ===== WASHING OF GOVERNMENT VEHICLES ===== -->
+        <div class="section-heading" data-section="Washing of Government Vehicles">🚗 Washing of Government Vehicles</div>
+
+        <div class="job-card" data-programme="Washing of Government Vehicles">
+            <div class="job-title">EPWP Participant — Washing of Government Vehicles</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 1)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 ABET (able to read &amp; write) &nbsp;|&nbsp; 👤 Ages 36–58</div>
+            <span class="badge badge-mature">Mature Candidates</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Washing of Government Vehicles">
+            <div class="job-title">EPWP Participant — Washing of Government Vehicles</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 2)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 ABET (able to read &amp; write) &nbsp;|&nbsp; 👤 Ages 36–58</div>
+            <span class="badge badge-mature">Mature Candidates</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Washing of Government Vehicles">
+            <div class="job-title">EPWP Participant — Washing of Government Vehicles</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 3)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 ABET (able to read &amp; write) &nbsp;|&nbsp; 👤 Ages 36–58</div>
+            <span class="badge badge-mature">Mature Candidates</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+        <div class="job-card" data-programme="Washing of Government Vehicles">
+            <div class="job-title">EPWP Participant — Washing of Government Vehicles</div>
+            <div class="job-info">📍 uMkhanyakude District (Post 4)</div>
+            <div class="job-info">📅 Closing: 10 April 2026 &nbsp;|&nbsp; 📄 Contract: 24 Months</div>
+            <div class="job-requirements">🎓 ABET (able to read &amp; write) &nbsp;|&nbsp; 👤 Ages 36–58</div>
+            <span class="badge badge-mature">Mature Candidates</span>
+            <br>
+            <a href="#" class="btn pdf">View Advert (PDF)</a>
+            <a href="https://wa.me/27XXXXXXXXX" class="btn apply">Apply via WhatsApp</a>
+        </div>
+
+    </div><!-- end #jobList -->
+
+    <div class="no-results" id="noResults">😕 No vacancies found matching your search.</div>
+
+    <!-- ENQUIRIES NOTE -->
+    <div style="background:#fff;border-radius:10px;padding:15px;margin-top:20px;border-left:6px solid #f2a900;box-shadow:0 2px 5px rgba(0,0,0,0.08);">
+        <strong>📞 Enquiries:</strong> Mr EB Biyela — EPWP Officer &nbsp;|&nbsp; <a href="tel:0355620261">035 562 0261</a><br>
+        <small style="color:#666;">Applications can be submitted at your nearest Department of Transport Offices/Camps (uMkhanyakude District). Notice is open for 5 days.</small>
+    </div>
+
+</div><!-- end .container -->
+
+<footer>
+    <p>© 2026 KZN Department of Transport | EPWP Programme | uMkhanyakude District</p>
+</footer>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const programmeFilter = document.getElementById('programmeFilter');
+    const resultsCount = document.getElementById('resultsCount');
+    const noResults = document.getElementById('noResults');
+
+    function filterJobs() {
+        const searchText = searchInput.value.toLowerCase();
+        const selectedProgramme = programmeFilter.value.toLowerCase();
+        const cards = document.querySelectorAll('.job-card');
+        const sections = document.querySelectorAll('.section-heading');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            const programme = (card.dataset.programme || '').toLowerCase();
+            const matchesSearch = text.includes(searchText);
+            const matchesProgramme = !selectedProgramme || programme.includes(selectedProgramme);
+            const show = matchesSearch && matchesProgramme;
+            card.style.display = show ? '' : 'none';
+            if (show) visibleCount++;
+        });
+
+        // Show/hide section headings based on whether any cards in that section are visible
+        sections.forEach(section => {
+            const sectionName = (section.dataset.section || '').toLowerCase();
+            const matchesProgramme = !selectedProgramme || sectionName.includes(selectedProgramme);
+            // Check if any sibling cards with same programme are visible
+            let hasVisible = false;
+            cards.forEach(card => {
+                const p = (card.dataset.programme || '').toLowerCase();
+                if (p === sectionName && card.style.display !== 'none') hasVisible = true;
+            });
+            section.style.display = (matchesProgramme && hasVisible) ? '' : 'none';
+        });
+
+        resultsCount.textContent = visibleCount + ' vacanc' + (visibleCount === 1 ? 'y' : 'ies') + ' found';
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('keyup', filterJobs);
+    programmeFilter.addEventListener('change', filterJobs);
+
+    // Init count
+    filterJobs();
+</script>
+
+</body>
+</html>
